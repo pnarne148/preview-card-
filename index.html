@@ -21,8 +21,7 @@
       <img src="images/image-product-mobile.jpg" alt="Product Image: Gabrielle Essence Eau De Parfum">
     </picture> -->
 
-    <img class = "product-image" alt="Product Image: Gabrielle Essence Eau De Parfum" src="images/image-product-mobile.jpg"
-    srcset="images/image-product-mobile.jpg 600w, images/image-product-desktop.jpg 700w"/>
+    <img id = "responsiveImage" class = "product-image" alt="Product Image: Gabrielle Essence Eau De Parfum" src="images/image-product-mobile.jpg"/>
     
     <div class = "details-container">
       <p class = "para">P E R F U M E</p>
@@ -44,4 +43,23 @@
   </div>
 
 </body>
+
+<script>
+  function updateImageSource() {
+    var width = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
+    if (width >= 768) { // For larger screens
+      document.getElementById('responsiveImage').src = 'images/image-product-desktop.jpg';
+    } else { // For smaller screens
+      document.getElementById('responsiveImage').src = 'images/image-product-mobile.jpg';
+    }
+  }
+
+  // Update the image source when the page loads
+  window.addEventListener('load', updateImageSource);
+
+  // Update the image source when the window is resized
+  window.addEventListener('resize', updateImageSource);
+</script>
+
+
 </html>
