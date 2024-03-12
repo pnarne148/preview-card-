@@ -1,0 +1,136 @@
+main {
+    display: flex;
+    flex-direction: column;
+  }
+
+body{
+    background-color: #F1EAE4;
+    padding: 20px 10px, 20px, 10px;
+}
+
+.preview-component {
+    height: 100%;
+    width: auto;
+    flex-direction: column;
+    border-radius: 15px;
+    margin: 28px 10px;
+    background-color: white;
+}
+
+.product-image {
+    width: 100%;
+    height: auto;
+    border-radius: 15px 15px 0px 0px;
+}
+
+.details-container{
+    padding: 12px 20px 12px 20px;
+    font-family: 'Montserrat';
+    font-size: 14px;
+}
+
+.para {
+    color: hsl(228, 12%, 48%);
+}
+
+.title{
+    font-size: x-large;
+    font-family: 'Fraunces';
+    font-weight: 700;
+    color: hsl(212, 21%, 14%);
+}
+
+.price{
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+}
+
+.price strong{
+    color: hsl(158, 36%, 37%);
+    font-size: x-large;
+    font-family: 'Fraunces';
+    font-weight: 700;    
+}
+
+.price p{
+    color: hsl(228, 12%, 48%);
+    font-size: 14px;
+    margin-left: 15px;
+}
+
+button{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: auto;
+    padding: 10px 20px 10px 20px;
+    background-color: hsl(158, 36%, 37%);
+    color: white;
+    border-radius: 10px;
+    border: #F1EAE4;
+    font-family: 'Montserrat';
+    font-weight: 700; 
+    align-items: center;
+    justify-content: center;
+    margin-top: 12px;
+    margin-bottom: 12px;
+}
+
+button img{
+    margin-right: 8px;
+}
+
+
+  /* This changes the layout for screens wider than 48em */
+  @media (min-width: 48em) 
+  {
+    body{
+        margin: 0%;
+        padding: 0%;
+        display: flex;
+        height: 100vh;
+        justify-content: center;
+        align-items: center;
+  
+    }
+
+    .preview-component {
+        display: flex;
+        width: 600px;
+        height: 450px;
+        flex-direction: row;
+        justify-content: center;
+        
+    }
+    
+    .product-image {
+        width: 50%;
+        height: auto;
+        border-radius: 15px 0px 0px 15px;
+    }
+    
+    .details-container{
+        width: 50%;
+        padding: 20px 30px 20px 30px;
+    }
+    
+    .title{
+        font-size: xx-large;
+        margin-top: 15px;
+        margin-bottom: 90px;
+    }
+
+    .para {
+        margin-top: 25px;
+    }
+
+    .price{
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+    
+}
+
+
+  
